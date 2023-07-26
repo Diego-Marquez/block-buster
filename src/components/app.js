@@ -14,9 +14,9 @@ class App extends Component {
       children: [
         new Header(),
         new Actions({
-          children:[
+          children: [
             new Search(),
-            new Filters()
+            new Filters(),
           ]
         }),
         new MovieList()

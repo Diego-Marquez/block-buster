@@ -14,7 +14,7 @@ const elements = [
   'input',
   'button',
   'select',
-  'section'
+  'section',
 ]
 
 function buildStyles(strings, dynamicValues, props) {

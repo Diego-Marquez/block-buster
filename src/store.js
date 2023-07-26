@@ -5,19 +5,19 @@ import {
   movieListAsMap,
   getAllIds,
   getMostValuedIds,
-  getLeastValuedIds
+  getLeastValuedIds,
 } from './normalize.js'
 
 const initialState = {
   movieList: movieListAsMap(movies),
-  filter:'all',
-  list:{
+  filter: 'all',
+  list: {
     all: getAllIds(movies),
-    mostValued:getMostValuedIds(movies),
-    leastValued:  getLeastValuedIds(movies),
+    mostValued: getMostValuedIds(movies),
+    leastValued: getLeastValuedIds(movies),
   }
-
 }
+
 const store = createStore(reducer, initialState)
 
 export default store

@@ -1,4 +1,3 @@
-
 function movieListAsMap(newList, oldList = new Map()) {
   return newList.reduce((list, movie) => {
     list.set(movie.id, movie)
@@ -6,12 +5,12 @@ function movieListAsMap(newList, oldList = new Map()) {
   }, oldList)
 }
 
+
 function getAllIds(list, oldList = []) {
   return oldList.concat(list.map(movie => movie.id))
 }
 
-
-function getMostValuedIds(list, oldList=[]) {
+function getMostValuedIds(list, oldList = []) {
   return list.reduce((list, movie) => {
     if (movie.vote_average >= 7) {
       list.push(movie.id)
@@ -20,9 +19,9 @@ function getMostValuedIds(list, oldList=[]) {
   }, oldList)
 }
 
-function getLeastValuedIds(list, oldList=[]) {
+function getLeastValuedIds(list, oldList = []) {
   return list.reduce((list, movie) => {
-    if (movie.vote_average <= 7) {
+    if (movie.vote_average < 7) {
       list.push(movie.id)
     }
     return list
@@ -30,10 +29,9 @@ function getLeastValuedIds(list, oldList=[]) {
 }
 
 
-
 export {
   movieListAsMap,
   getAllIds,
   getMostValuedIds,
-  getLeastValuedIds
+  getLeastValuedIds,
 }

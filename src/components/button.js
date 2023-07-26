@@ -1,4 +1,4 @@
-import styled from "../lib/styled-components.js"
+import styled from '../lib/styled-components.js'
 
 export default styled.button`
   font-size: 1rem;
